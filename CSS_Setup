@@ -21,7 +21,7 @@ body {
   padding−left : 15px;
 }
 
-#telos trexoume Tools> Run manage.py kai vazoyme entoli:
+# Tools> Run manage.py και γράφουμε:
 collectstatic
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
