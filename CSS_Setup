@@ -1,17 +1,17 @@
-# gia tin eisagwgi CSS ston kwdika mas
+# για Εισαγωγή CSS στην Σελίδα
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# 1. sto arxeio mas .html ( post_list.html ) antigrafoume sto <head> to link to opoio tha mas parexei to bootstrap:
+# Στο αρχείο post_list.html αντιγράφουμε στο <head> το παρακάτω link που μας εγκαθιστά το Bootstrap:
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 
-#panw panw sto arxeio html bazoume:
+# Στην αρχή του κώδικα html βάζουμε την κάτω γραμμή:
 {% load static %}
 
-# meta dimiourgoume sto fakelo blog ta eksis directories: static>blog kai mesa sto directory blog dimiourgoume arxeio stylesheet me onoma blog.css
-# ekei mesa apothikeuoume olo mas to CSS gia thn selida
-# paradeigmata CSS
+# Δημιουργούμε το εξής Path(directories) στο φακελο blog: static>blog
+# Στον φάκελο blog δημιουργούμε νέο αρχείο stylesheet με όνομα: blog.css
+# Παραδείγματα CSS:
 
 h1 {
   color: #FCA205;
