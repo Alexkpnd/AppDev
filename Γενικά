@@ -1,0 +1,34 @@
+# Στο post_list.html βαζουμε στην θεση του τιτλου κάθε pot:
+
+<h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+
+
+# Στο blog>urls.py βάζουμε νέο path:
+
+path('post/<int:pk>/', views.post_detail, name='post_detail'),
+
+
+# Στο blog>views.py προσθέτουμε στο import render:
+
+, get_object_or_404
+
+# και μία def:
+
+def post_detail(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    return render(request, 'blog/post_detail.html', {'post': post})
+    
+
+# Στο post_detail.html στο <body>:
+
+{% extends 'blog/base.html' %}
+{% block content %}
+    <div class="post">
+      {% if post.published_date %}
+      {% endif %}
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.published_date }}</p>
+      <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endblock %}
+
