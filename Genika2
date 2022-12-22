@@ -14,3 +14,11 @@ class Category(models.Model):
 
 
 admin.site.register(Category)
+
+
+
+
+<p>Δημοσιεύθηκε από {{ post.author }}!
+            {% if post.category %}
+                Είδος: <a href="{% url 'post_list' %}?cat={{ post.category_id }} ">{{ post.category }}</a>
+            {% endif %}
