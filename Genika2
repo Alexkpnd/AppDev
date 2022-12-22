@@ -22,3 +22,8 @@ admin.site.register(Category)
             {% if post.category %}
                 Είδος: <a href="{% url 'post_list' %}?cat={{ post.category_id }} ">{{ post.category }}</a>
             {% endif %}
+
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
