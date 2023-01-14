@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Συνταγούλης.gr | Συνταγές</title>
+</head>
+<body>
+{% extends 'Syntagoulis/base.html' %}
+
+{% block content %}
+<div class="content-container">
+    <div class="row">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-8">
+            <div class="recipe">
+                {% if recipe.published_date %}
+                {% endif %}
+                <h2>{{ recipe.title }}</h2>
+                <p>Χρόνος Προετοιμασίας: {{ recipe.cooking_time }} </p>
+                <p>Ποσότητα: {{ recipe.amount }}</p>
+                <p>{{ recipe.ingredients|safe }}</p>
+                <p>{{ recipe.process|safe }}</p>
+                <p> Η συνταγή προστέθηκε από {{ recipe.publisher }} στις {{ recipe.published_date }}</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>
